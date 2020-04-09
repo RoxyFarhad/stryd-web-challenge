@@ -4,9 +4,11 @@
 
 Hello from the Stryd team!
 
-Thanks for taking the time to complete this exercise. Please submit your solution no more than 3 days after you receive this project. We're excited to review your work.
+Thanks for taking the time to complete this exercise. Please submit your solution no more than 72 hours after you receive this project. We're excited to review your work.
 
-In this task, you'll need to setup a small web application using [React](https://reactjs.org/) to allow someone to view some basic details about their run workout data.
+In this task, you'll need to setup a small web application to allow someone to view some basic details about their run workout data.
+
+There is a base project in this repo that should get you started building using [React](https://reactjs.org/). However, if you do not know React and feel you could better implement a solution using another framework or method, please feel free to do so.
 
 You will need node and npm or yarn installed on your machine.
 
@@ -14,10 +16,11 @@ Once you have those setup, please clone or download this repo, enter the project
 
 You'll be evaluated on (in no particular order):
 
-1. The overall user experience and design of the application
-2. The speed and efficiency of the app
-3. The correctness of computations & stability of the app
-4. Overall application architecture and code quality
+1. Knowledge of JavaScript, HTML, CSS and framework best practices
+2. Overall user experience
+3. The speed and efficiency of the app
+4. The correctness of computations & stability of the app
+5. Overall application architecture and code quality
 
 ## Requirements
 
@@ -42,9 +45,11 @@ Users should be able to make the following changes:
 2. Select an duration type between `moving` or `elapsed` (See the [Moving vs Elapsed](#moving-vs-elapsed-time) section for more info on what this means)
 3. Select a Lap Table view option - either `manual splits` or `distance splits` (See the [Laps Table](#laps-table) section for more info on what this means)
 
+You may choose which options you'd like to use as the defaults on page load.
+
 There is a base component (`components/UserPreferences.js`) that contains a a basic, mostly unstyled implementation for the distance and duration selectors. You should refactor this file to make it easier to add and maintain more selectors of the same type in the future, and then add the new Lap Table View option. You'll also need to update this component so that it can change other sections on the page when the user makes a selection.
 
-You may choose which options you'd like to use as the defaults on page load.
+**NOTE:** If you are not using React to build your project, you can ignore this refactoring exercise. However, you should still implement the same selectors using your chosen method's best practices.
 
 ### Run Summary
 
@@ -116,7 +121,7 @@ Submit your solution source code in one of the following ways:
 1. A link to a GitHub repo
 2. A zip file (without the `node_modules` directory)
 
-Your solution must be able to build using the the `npm run build` or `yarn build` command. It can either run locally, or you can provide a hosted link to the application.
+If using React, your solution must be able to build using the the `npm run build` or `yarn build` command. If not using React, your application still needs to be built in a way that it could be run and deployed. It can either run locally, or you can provide a hosted link to the application.
 
 ## Good luck!
 

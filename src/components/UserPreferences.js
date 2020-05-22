@@ -1,23 +1,23 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const UserPreferences = props => {
-  const [unitPref, setUnitPref] = useState("Kilometers");
-  const [durationPref, setDurationPref] = useState("Moving");
+  const [unitPref, setUnitPref] = useState('Kilometers');
+  const [lapsPref, setLapsPref] = useState('Manual');
 
   return (
     <section
       style={{
-        display: "block",
-        border: "1px solid gainsboro",
-        padding: "10px"
+        display: 'block',
+        border: '1px solid gainsboro',
+        padding: '10px'
       }}
     >
       <h2 style={{ marginTop: 0 }}>User Settings</h2>
-      <div style={{ display: "block", marginTop: "25px" }}>
-        <p style={{ margin: "0px" }}>Unit Preference:</p>
-        <div style={{ display: "block" }}>
+      <div style={{ display: 'block', marginTop: '25px' }}>
+        <p style={{ margin: '0px' }}>Unit Preference:</p>
+        <div style={{ display: 'block' }}>
           <select
-            id={"unit-selector"}
+            id={'unit-selector'}
             onChange={event => {
               setUnitPref(event.target.value);
             }}
@@ -28,18 +28,18 @@ const UserPreferences = props => {
           </select>
         </div>
       </div>
-      <div style={{ display: "block", marginTop: "25px" }}>
-        <p style={{ margin: "0px" }}>Duration Preference:</p>
-        <div style={{ display: "block" }}>
+      <div style={{ display: 'block', marginTop: '25px' }}>
+        <p style={{ margin: '0px' }}>Laps Preference:</p>
+        <div style={{ display: 'block' }}>
           <select
-            id={"duration-type-selector"}
+            id={'lap-type-selector'}
             onChange={event => {
-              setDurationPref(event.target.value);
+              setLapsPref(event.target.value);
             }}
-            value={durationPref}
+            value={lapsPref}
           >
-            <option>Moving</option>
-            <option>Elapsed</option>
+            <option>Manual</option>
+            <option>Distance</option>
           </select>
         </div>
       </div>

@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { UserContext } from "./UserContext.js"
 
 const UserPreferences = props => {
-  const [unitPref, setUnitPref] = useState('Kilometers');
-  const [lapsPref, setLapsPref] = useState('Manual');
 
+  const user = useContext(UserContext)
+  
   return (
     <section
       style={{
@@ -16,12 +17,13 @@ const UserPreferences = props => {
       <div style={{ display: 'block', marginTop: '25px' }}>
         <p style={{ margin: '0px' }}>Unit Preference:</p>
         <div style={{ display: 'block' }}>
+          
           <select
             id={'unit-selector'}
             onChange={event => {
-              setUnitPref(event.target.value);
+              user.setUnitPref(event.target.value);
             }}
-            value={unitPref}
+            value={user.unitPref}
           >
             <option>Kilometers</option>
             <option>Miles</option>
@@ -31,16 +33,16 @@ const UserPreferences = props => {
       <div style={{ display: 'block', marginTop: '25px' }}>
         <p style={{ margin: '0px' }}>Laps Preference:</p>
         <div style={{ display: 'block' }}>
-          <select
+            <select
             id={'lap-type-selector'}
             onChange={event => {
-              setLapsPref(event.target.value);
+              user.setLapsPref(event.target.value);
             }}
-            value={lapsPref}
-          >
-            <option>Manual</option>
-            <option>Distance</option>
-          </select>
+            value={user.lapsPref}
+            >  
+              <option>Manual</option>
+              <option>Distance</option>
+            </select>       
         </div>
       </div>
     </section>

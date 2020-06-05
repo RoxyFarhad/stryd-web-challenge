@@ -1,23 +1,14 @@
 
-Running Project
-----------------
-
-1. git clone https://github.com/RoxyFarhad/stryd-web-challenge
-2. cd stryd-web-challenge
-3. Can run either with 
-    1. `yarn start` 
-    2. `yarn build` && `yarn global add serve` && `serve -s build`
-
 Project Breakdown
 ------------------
 
 Components: 
-1. LapsTable
+1. UserPreferences
 2. PeakPowers
 3. RunSummary
 4. LapsTable (has its own scss styling file (LapsTable.scss))
 
-For this challenge, I mainly focused on the functionality rather than styling of the UI, and if I had more time that is something that I would have also significantly changed by making the text, components much more user friendly.  
+For this challenge, I mainly focused on the functionality rather than styling of the UI, and if I had more time that is something that I would have also significantly changed. UserPreferences get passed around the App through using React Contexts that are set, which made it extremely easy to maintain and change data if those preferences changed. 
 
 Each different "feature" i.e. UserPreferences, RunSummary, LapsTable, PeakPowers, has its own component with its own functions in order to keep a lot more of the code local which gets the runData passed from the main `App` through props, which made it easier to read and debug. I generally like to minimise the length of individual functions because of readability and debug, which is why there are mutliple react components in the individual components. 
 

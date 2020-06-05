@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios"; 
-import "./components/App.scss"
 import {activityApi, userToken} from "./api.js"; 
 import UserPreferences from "./components/UserPreferences";
 import RunSummary from "./components/RunSummary.js"
@@ -25,7 +24,7 @@ const App = () => {
   }, [])   
 
   return runData.length !== 0 ? (
-    <main className="main">
+    <main style={{fontFamily: 'Roboto'}}>
       <UserProvider> 
         <UserPreferences />
         <hr />
@@ -37,7 +36,7 @@ const App = () => {
       </UserProvider>
     </main>
   ) : 
-  (<div className="main"> Loading Data </div>);
+  (<div className="main"> Loading Data ... </div>);
 };
 
 export default App;
